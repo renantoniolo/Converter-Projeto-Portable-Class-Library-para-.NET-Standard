@@ -6,12 +6,11 @@ Além disso, o .NET Standard é o futuro! Ele substitui o PCL e o Shared Project
 
 É muito simples
 
-1)
-Descarregue seu projeto PCL (clique com o botão direito -> descarregar) 
+- Descarregue seu projeto PCL (clique com o botão direito -> descarregar) 
 e comece a editá-lo (direito -> clique em editar)
 Exclua tudo no csproj e insira isto:
 
--------------------------------------------------------------
+```
 <Project Sdk = "Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFramework> netstandard2.0 </ TargetFramework>
@@ -22,13 +21,13 @@ Exclua tudo no csproj e insira isto:
   </ ItemGroup>
 
 </ Project>
--------------------------------------------------------------
 
-2)
-Adicione novamente NuGets, simplesmente abra o arquivo packages.config e adicione as referências do pacote acima, 
+```
+
+- Adicione novamente NuGets, simplesmente abra o arquivo packages.config e adicione as referências do pacote acima, 
 ou através do gerenciador de pacotes NuGet.
 
--------------------------------------------------------------
+```
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
@@ -41,9 +40,9 @@ ou através do gerenciador de pacotes NuGet.
   </ItemGroup>
 
 </Project>
--------------------------------------------------------------
+```
 
-Exclua AssemblyInfo.cs (isso agora está no csproj) e 
+- Exclua AssemblyInfo.cs (isso agora está no csproj) e 
 packages.config (também no csproj via PackageReference)
 
 Pronto você terminou! 
